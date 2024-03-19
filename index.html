@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Database</title>
+  </head>
+  <body>
+    <div id="app">
+      <main class="app-main">
+        <section class="employee-sect">
+          <div class="container">
+            <div class="employees">
+              <h1 class="employees__title">
+                Employee Database Management System
+              </h1>
+              <div class="employees__add-btn-wrap">
+                <button id="employee-add-btn" class="employees__add-btn">Add new</button>
+              </div>
+              <div class="employees__database">
+                <div class="employees__all-wrap">
+                  <h2 class="employees__all-title">All Employees</h2>
+                  <div class="employees__all-view"></div>
+                </div>
+
+                <div class="employees__single-wrap">
+                  <h2 class="employees__single-title">View Employee Details</h2>
+                  <div class="employees__single-view"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="modal" id="modal">
+          <div class="modal__content">
+            <div class="modal__close" id="modal-close">X</div>
+            <h4 class="modal__title"></h4>
+            <form class="modal__form" id="modal-form">
+              <div class="modal__input-row">
+                <label for="employee_name">Name: </label>
+                <input required id="employee_name" name="employee_name" type="text" />
+              </div>
+              <div class="modal__input-row">
+                <label for="employee_age">Age: </label>
+                <input required id="employee_age" name="employee_age" type="number" />
+              </div>
+              <div class="modal__input-row">
+                <label for="employee_salary">Salary: </label>
+                <input required id="employee_salary" name="employee_salary" type="number" />
+              </div>
+              <div class="modal__btn-row">
+                <input class="modal__btn modal__btn--submit" id="modal-submit" type="submit" value="Save" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
